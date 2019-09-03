@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Wekendly Calender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="Freamwork/Jquery/jquery.min.js" type="text/javascript" language="javascript"></script>
+    <script src="Freamwork/Jquery/jquery-ui.min.js" type="text/javascript" language="javascript"></script>
+    <link rel="stylesheet" type="text/css" href="Freamwork/Jquery/jquery-ui.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="Freamwork/Style-Js/style.css" />
+    <script type="text/javascript" src="Freamwork/Table/jq.schedule.js"></script>
+
+    <link href="Freamwork/BootStrap/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="Freamwork/BootStrap/bootstrap.min.js"></script>
+    <script src="Freamwork/BootStrap/popper.min.js"></script>
+
+    <script type="text/javascript" src="Freamwork/Style-Js/Script.js"></script>
+
+    <link rel="stylesheet" href="Freamwork/Pure/pure-min.css">
+
+    <link rel="stylesheet" type="text/css" href="Freamwork/Zebra/zebra_tooltips.min.css">
+    <script src="Freamwork/Zebra/zebra_tooltips.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+<div align="center" style="margin-top: 10px;display: block"><button type="button" class="btn btn-info Sub_Btn" data-toggle="modal" data-target="#myModal" >افزودن</button></div>
+
+<br>
+    <div id="Window">
+        <div id="schedule"></div>
+    </div>
+
+<!---------------------------------The_Modal------------------------------------>
+<link href="Freamwork/BootStrap/bootstrap.min.css">
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel" align="center" ></h3>
+    </div>
+    <div class="modal-body" align="right">
+        <form class="pure-form pure-form-aligned" dir="rtl" id="I_U_Form" method="post" action="Php/Processes.php">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="Title">عنوان :</label>
+                    <input id="Title" type="text"  style="height: 40px" name="Title_Field">
+                    <br>
+                    <label for="Day">روز :</label>
+                    <select id="Day" style="height: 40px" name="Day_Field">
+                        <option>شنبه</option>
+                        <option>یکشنبه</option>
+                        <option>دوشنبه</option>
+                        <option>سه شنبه</option>
+                        <option>چهارشنبه</option>
+                        <option>پنجشنبه</option>
+                        <option>جمعه</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="Time1">زمان :</label>
+                    <input type="time" style="height: 40px" class="pure-u-4-24" dir="ltr" value="13:20" id="Time1" name="Time_Field1">
+                    &nbsp;&nbsp;
+                    - -
+                    &nbsp;&nbsp;
+                    <input type="time" style="height: 40px" class="pure-u-4-24" dir="ltr" value="15:00" name="Time_Field2" id="Time2">
+                    <br>
+                    <label for="Color">رنگ :</label>
+                    <input type="color" style="height: 40px" class="pure-u-3-8" id="Color" name="Color_Field">
+                    <br>
+                    <label for="Note">یادداشت :</label>
+                    <textarea name="Note_Field" id="Note" cols="30" rows="5" style="resize: none" class="pure-u-7-12"></textarea>
+                    <input type="text" hidden name="Hidden_Field" id="Hidden_Field">
+                    <input type="text" hidden name="Id_Field" id="Id">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div align="left"><button class="btn btn-primary Sub_Btn_Form"></button></div>
+        <div align="left"><button class="btn btn-primary Sub_Btn_Form2"></button></div>
+    </div>
+</div>
+<!---------------------------------The_Modal------------------------------------>
+<div id="Result_Box" class="alert-info"><p class="alert-link" id="Result_Tex"></p></div>
+
+</body>
+</html>
