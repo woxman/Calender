@@ -19,7 +19,10 @@ function T_Toltip(x){
     var ptext=x.childNodes[1];
     ptext.setAttribute('title', text);
     
-    new $.Zebra_Tooltips($('.text'));
+    new $.Zebra_Tooltips($('.text'),{
+        max_width:  800
+    });
+
 }
 
 function Up(x) {
